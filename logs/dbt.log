@@ -1,0 +1,1265 @@
+[0m19:24:12.550691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10778da60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c3a3c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c3a030>]}
+
+
+============================== 19:24:12.552394 | eb27bd69-7426-4abd-a76b-0cad81f66c54 ==============================
+[0m19:24:12.552394 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:24:12.552722 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'quiet': 'False', 'warn_error': 'None', 'invocation_command': 'dbt run', 'profiles_dir': '/Users/nishu/.dbt', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'partial_parse': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'log_path': '/Users/nishu/my_dbtproject/logs', 'printer_width': '80', 'static_parser': 'True', 'no_print': 'None', 'fail_fast': 'False', 'log_cache_events': 'False', 'empty': 'False', 'target_path': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'cache_selected_only': 'False'}
+[0m19:24:13.445554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eb27bd69-7426-4abd-a76b-0cad81f66c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13347dfa0>]}
+[0m19:24:13.470676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eb27bd69-7426-4abd-a76b-0cad81f66c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1334d0a10>]}
+[0m19:24:13.471273 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m19:24:13.562005 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m19:24:13.562522 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:24:13.562718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'eb27bd69-7426-4abd-a76b-0cad81f66c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1335e82c0>]}
+[0m19:24:14.117502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eb27bd69-7426-4abd-a76b-0cad81f66c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13343eed0>]}
+[0m19:24:14.150773 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m19:24:14.151751 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m19:24:14.162351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eb27bd69-7426-4abd-a76b-0cad81f66c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1342fdc10>]}
+[0m19:24:14.162596 [info ] [MainThread]: Found 2 models, 4 data tests, 474 macros
+[0m19:24:14.162761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eb27bd69-7426-4abd-a76b-0cad81f66c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13351af90>]}
+[0m19:24:14.163508 [info ] [MainThread]: 
+[0m19:24:14.163673 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:24:14.163801 [info ] [MainThread]: 
+[0m19:24:14.164030 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:24:14.166058 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_USER_DB_CAMEL'
+[0m19:24:14.222535 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL"
+[0m19:24:14.222767 [debug] [ThreadPool]: On list_USER_DB_CAMEL: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL"} */
+show terse schemas in database USER_DB_CAMEL
+    limit 10000
+[0m19:24:14.222918 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:24:14.926803 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.703 seconds
+[0m19:24:14.932435 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL, now list_USER_DB_CAMEL_analytics)
+[0m19:24:14.946520 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_analytics"
+[0m19:24:14.946989 [debug] [ThreadPool]: On list_USER_DB_CAMEL_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_analytics"} */
+show objects in USER_DB_CAMEL.analytics limit 10000;
+[0m19:24:15.102688 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.155 seconds
+[0m19:24:15.110235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eb27bd69-7426-4abd-a76b-0cad81f66c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1342fc170>]}
+[0m19:24:15.116016 [debug] [Thread-1 (]: Began running node model.my_dbtproject.my_first_dbt_model
+[0m19:24:15.116843 [info ] [Thread-1 (]: 1 of 2 START sql table model analytics.my_first_dbt_model ...................... [RUN]
+[0m19:24:15.117494 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_analytics, now model.my_dbtproject.my_first_dbt_model)
+[0m19:24:15.117970 [debug] [Thread-1 (]: Began compiling node model.my_dbtproject.my_first_dbt_model
+[0m19:24:15.129564 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_dbtproject.my_first_dbt_model"
+[0m19:24:15.130878 [debug] [Thread-1 (]: Began executing node model.my_dbtproject.my_first_dbt_model
+[0m19:24:15.160202 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_dbtproject.my_first_dbt_model"
+[0m19:24:15.161364 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.my_first_dbt_model"
+[0m19:24:15.161664 [debug] [Thread-1 (]: On model.my_dbtproject.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.my_first_dbt_model"} */
+create or replace transient table USER_DB_CAMEL.analytics.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m19:24:16.344772 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.182 seconds
+[0m19:24:16.373788 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eb27bd69-7426-4abd-a76b-0cad81f66c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b65a00>]}
+[0m19:24:16.374519 [info ] [Thread-1 (]: 1 of 2 OK created sql table model analytics.my_first_dbt_model ................. [[32mSUCCESS 1[0m in 1.25s]
+[0m19:24:16.375064 [debug] [Thread-1 (]: Finished running node model.my_dbtproject.my_first_dbt_model
+[0m19:24:16.375649 [debug] [Thread-1 (]: Began running node model.my_dbtproject.my_second_dbt_model
+[0m19:24:16.376179 [info ] [Thread-1 (]: 2 of 2 START sql view model analytics.my_second_dbt_model ...................... [RUN]
+[0m19:24:16.376537 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_dbtproject.my_first_dbt_model, now model.my_dbtproject.my_second_dbt_model)
+[0m19:24:16.376782 [debug] [Thread-1 (]: Began compiling node model.my_dbtproject.my_second_dbt_model
+[0m19:24:16.379018 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_dbtproject.my_second_dbt_model"
+[0m19:24:16.379560 [debug] [Thread-1 (]: Began executing node model.my_dbtproject.my_second_dbt_model
+[0m19:24:16.393947 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_dbtproject.my_second_dbt_model"
+[0m19:24:16.394615 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.my_second_dbt_model"
+[0m19:24:16.394850 [debug] [Thread-1 (]: On model.my_dbtproject.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.my_second_dbt_model"} */
+create or replace   view USER_DB_CAMEL.analytics.my_second_dbt_model
+  
+   as (
+    -- Use the `ref` function to select from other models
+
+select *
+from USER_DB_CAMEL.analytics.my_first_dbt_model
+where id = 1
+  );
+[0m19:24:16.849148 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.452 seconds
+[0m19:24:16.859264 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eb27bd69-7426-4abd-a76b-0cad81f66c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c27fb0>]}
+[0m19:24:16.860260 [info ] [Thread-1 (]: 2 of 2 OK created sql view model analytics.my_second_dbt_model ................. [[32mSUCCESS 1[0m in 0.48s]
+[0m19:24:16.861085 [debug] [Thread-1 (]: Finished running node model.my_dbtproject.my_second_dbt_model
+[0m19:24:16.862530 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:24:16.862943 [debug] [MainThread]: Connection 'model.my_dbtproject.my_second_dbt_model' was left open.
+[0m19:24:16.863305 [debug] [MainThread]: On model.my_dbtproject.my_second_dbt_model: Close
+[0m19:24:17.014695 [info ] [MainThread]: 
+[0m19:24:17.015932 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 2.85 seconds (2.85s).
+[0m19:24:17.017865 [debug] [MainThread]: Command end result
+[0m19:24:17.048816 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m19:24:17.050725 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m19:24:17.055646 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/nishu/my_dbtproject/target/run_results.json
+[0m19:24:17.055931 [info ] [MainThread]: 
+[0m19:24:17.056261 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:24:17.056504 [info ] [MainThread]: 
+[0m19:24:17.056764 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m19:24:17.059841 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.544501, "process_in_blocks": "0", "process_kernel_time": 0.636571, "process_mem_max_rss": "208519168", "process_out_blocks": "0", "process_user_time": 3.484718}
+[0m19:24:17.060243 [debug] [MainThread]: Command `dbt run` succeeded at 19:24:17.060170 after 4.54 seconds
+[0m19:24:17.060536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c39e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13343e9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1325f1820>]}
+[0m19:24:17.060820 [debug] [MainThread]: Flushing usage events
+[0m19:24:17.432807 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:54:18.313742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106abc200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f6dc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f6e210>]}
+
+
+============================== 21:54:18.315797 | 5d7b7551-c12f-4504-91ad-d5a2ad6dabe4 ==============================
+[0m21:54:18.315797 [info ] [MainThread]: Running with dbt=1.9.4
+[0m21:54:18.316151 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'target_path': 'None', 'no_print': 'None', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'partial_parse': 'True', 'empty': 'False', 'invocation_command': 'dbt run', 'fail_fast': 'False', 'use_colors': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'profiles_dir': '/Users/nishu/.dbt', 'log_path': '/Users/nishu/my_dbtproject/logs', 'warn_error': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'cache_selected_only': 'False', 'introspect': 'True', 'version_check': 'True'}
+[0m21:54:19.204073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5d7b7551-c12f-4504-91ad-d5a2ad6dabe4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e56bbf0>]}
+[0m21:54:19.229300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5d7b7551-c12f-4504-91ad-d5a2ad6dabe4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f03a70>]}
+[0m21:54:19.229928 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m21:54:19.299946 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m21:54:19.377509 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 5 files added, 0 files changed.
+[0m21:54:19.377828 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://models/input/session_timestamp.sql
+[0m21:54:19.377985 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://models/output/session_summary.sql
+[0m21:54:19.378145 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://models/output/schema.yml
+[0m21:54:19.378273 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://models/input/user_session_channel.sql
+[0m21:54:19.378398 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://snapshots/snapshot_session_summary.sql
+[0m21:54:19.652042 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.my_dbtproject.session_timestamp' (models/input/session_timestamp.sql) depends on a source named 'raw.session_timestamp' which was not found
+[0m21:54:19.654947 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.3789324, "process_in_blocks": "0", "process_kernel_time": 0.401665, "process_mem_max_rss": "200638464", "process_out_blocks": "0", "process_user_time": 3.130012}
+[0m21:54:19.655196 [debug] [MainThread]: Command `dbt run` failed at 21:54:19.655149 after 1.38 seconds
+[0m21:54:19.655373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fe712b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fbbae10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fe3c800>]}
+[0m21:54:19.655536 [debug] [MainThread]: Flushing usage events
+[0m21:54:20.162051 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:08:34.095242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042d3b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104eb3e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f25e80>]}
+
+
+============================== 22:08:34.097055 | a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc ==============================
+[0m22:08:34.097055 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:08:34.097394 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/nishu/.dbt', 'log_cache_events': 'False', 'empty': 'False', 'version_check': 'True', 'no_print': 'None', 'quiet': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'cache_selected_only': 'False', 'write_json': 'True', 'log_format': 'default', 'log_path': '/Users/nishu/my_dbtproject/logs', 'invocation_command': 'dbt run', 'warn_error': 'None', 'partial_parse': 'True', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'target_path': 'None', 'printer_width': '80', 'indirect_selection': 'eager', 'fail_fast': 'False'}
+[0m22:08:34.798259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ff525a0>]}
+[0m22:08:34.823208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f04500>]}
+[0m22:08:34.823705 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m22:08:34.894056 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m22:08:34.970032 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 6 files added, 0 files changed.
+[0m22:08:34.970365 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://models/output/schema.yml
+[0m22:08:34.970529 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://models/input/session_timestamp.sql
+[0m22:08:34.970665 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://models/output/session_summary.sql
+[0m22:08:34.970813 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://models/output/sources.yml
+[0m22:08:34.970940 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://snapshots/snapshot_session_summary.sql
+[0m22:08:34.971076 [debug] [MainThread]: Partial parsing: added file: my_dbtproject://models/input/user_session_channel.sql
+[0m22:08:35.319569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x140aa87a0>]}
+[0m22:08:35.362444 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:08:35.363487 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:08:35.374972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12d28b140>]}
+[0m22:08:35.375229 [info ] [MainThread]: Found 5 models, 6 data tests, 1 snapshot, 3 sources, 474 macros
+[0m22:08:35.375399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12d4e71d0>]}
+[0m22:08:35.376246 [info ] [MainThread]: 
+[0m22:08:35.376416 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:08:35.376546 [info ] [MainThread]: 
+[0m22:08:35.376779 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:08:35.378900 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_USER_DB_CAMEL'
+[0m22:08:35.437539 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL"
+[0m22:08:35.437794 [debug] [ThreadPool]: On list_USER_DB_CAMEL: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL"} */
+show terse schemas in database USER_DB_CAMEL
+    limit 10000
+[0m22:08:35.437933 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:08:36.021010 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.583 seconds
+[0m22:08:36.024602 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL, now list_USER_DB_CAMEL_snapshot)
+[0m22:08:36.036903 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_snapshot"
+[0m22:08:36.037311 [debug] [ThreadPool]: On list_USER_DB_CAMEL_snapshot: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_snapshot"} */
+show objects in USER_DB_CAMEL.snapshot limit 10000;
+[0m22:08:36.147499 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01bb85d4-0104-e06e-0004-59ff00188476
+[0m22:08:36.148046 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m22:08:36.148619 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m22:08:36.149019 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m22:08:36.149704 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_snapshot, now list_USER_DB_CAMEL_analytics)
+[0m22:08:36.152835 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_analytics"
+[0m22:08:36.153207 [debug] [ThreadPool]: On list_USER_DB_CAMEL_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_analytics"} */
+show objects in USER_DB_CAMEL.analytics limit 10000;
+[0m22:08:36.290752 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.137 seconds
+[0m22:08:36.299937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12d339550>]}
+[0m22:08:36.306553 [debug] [Thread-1 (]: Began running node model.my_dbtproject.my_first_dbt_model
+[0m22:08:36.307326 [info ] [Thread-1 (]: 1 of 5 START sql table model analytics.my_first_dbt_model ...................... [RUN]
+[0m22:08:36.307923 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_analytics, now model.my_dbtproject.my_first_dbt_model)
+[0m22:08:36.308381 [debug] [Thread-1 (]: Began compiling node model.my_dbtproject.my_first_dbt_model
+[0m22:08:36.318645 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_dbtproject.my_first_dbt_model"
+[0m22:08:36.319918 [debug] [Thread-1 (]: Began executing node model.my_dbtproject.my_first_dbt_model
+[0m22:08:36.350131 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_dbtproject.my_first_dbt_model"
+[0m22:08:36.351119 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.my_first_dbt_model"
+[0m22:08:36.351431 [debug] [Thread-1 (]: On model.my_dbtproject.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.my_first_dbt_model"} */
+create or replace transient table USER_DB_CAMEL.analytics.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m22:08:37.444267 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.092 seconds
+[0m22:08:37.479774 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102e518b0>]}
+[0m22:08:37.480537 [info ] [Thread-1 (]: 1 of 5 OK created sql table model analytics.my_first_dbt_model ................. [[32mSUCCESS 1[0m in 1.17s]
+[0m22:08:37.481158 [debug] [Thread-1 (]: Finished running node model.my_dbtproject.my_first_dbt_model
+[0m22:08:37.481547 [debug] [Thread-1 (]: Began running node model.my_dbtproject.session_timestamp
+[0m22:08:37.481969 [info ] [Thread-1 (]: 2 of 5 START sql view model analytics.session_timestamp ........................ [RUN]
+[0m22:08:37.482446 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_dbtproject.my_first_dbt_model, now model.my_dbtproject.session_timestamp)
+[0m22:08:37.482831 [debug] [Thread-1 (]: Began compiling node model.my_dbtproject.session_timestamp
+[0m22:08:37.485346 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_dbtproject.session_timestamp"
+[0m22:08:37.486079 [debug] [Thread-1 (]: Began executing node model.my_dbtproject.session_timestamp
+[0m22:08:37.502761 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_dbtproject.session_timestamp"
+[0m22:08:37.503535 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.session_timestamp"
+[0m22:08:37.503787 [debug] [Thread-1 (]: On model.my_dbtproject.session_timestamp: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.session_timestamp"} */
+create or replace   view USER_DB_CAMEL.analytics.session_timestamp
+  
+   as (
+    WITH session_timestamp_cte AS (
+    SELECT
+        sessionId,
+        ts
+    FROM USER_DB_CAMEL.raw.session_timestamp
+)
+SELECT
+    sessionId,
+    ts
+FROM session_timestamp_cte
+  );
+[0m22:08:37.851902 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.347 seconds
+[0m22:08:37.857385 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14349e2a0>]}
+[0m22:08:37.858479 [info ] [Thread-1 (]: 2 of 5 OK created sql view model analytics.session_timestamp ................... [[32mSUCCESS 1[0m in 0.37s]
+[0m22:08:37.859266 [debug] [Thread-1 (]: Finished running node model.my_dbtproject.session_timestamp
+[0m22:08:37.859826 [debug] [Thread-1 (]: Began running node model.my_dbtproject.user_session_channel
+[0m22:08:37.860617 [info ] [Thread-1 (]: 3 of 5 START sql view model analytics.user_session_channel ..................... [RUN]
+[0m22:08:37.861304 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_dbtproject.session_timestamp, now model.my_dbtproject.user_session_channel)
+[0m22:08:37.861831 [debug] [Thread-1 (]: Began compiling node model.my_dbtproject.user_session_channel
+[0m22:08:37.865985 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_dbtproject.user_session_channel"
+[0m22:08:37.866993 [debug] [Thread-1 (]: Began executing node model.my_dbtproject.user_session_channel
+[0m22:08:37.869899 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_dbtproject.user_session_channel"
+[0m22:08:37.871089 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.user_session_channel"
+[0m22:08:37.871503 [debug] [Thread-1 (]: On model.my_dbtproject.user_session_channel: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.user_session_channel"} */
+create or replace   view USER_DB_CAMEL.analytics.user_session_channel
+  
+   as (
+    WITH user_session AS (
+    SELECT
+        userId,
+        sessionId,
+        channel
+    FROM USER_DB_CAMEL.raw.user_session_channel
+)
+SELECT
+    userId,
+    sessionId,
+    channel
+FROM user_session
+  );
+[0m22:08:38.311848 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.439 seconds
+[0m22:08:38.317688 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1418c7170>]}
+[0m22:08:38.318581 [info ] [Thread-1 (]: 3 of 5 OK created sql view model analytics.user_session_channel ................ [[32mSUCCESS 1[0m in 0.46s]
+[0m22:08:38.319262 [debug] [Thread-1 (]: Finished running node model.my_dbtproject.user_session_channel
+[0m22:08:38.319711 [debug] [Thread-1 (]: Began running node model.my_dbtproject.my_second_dbt_model
+[0m22:08:38.320397 [info ] [Thread-1 (]: 4 of 5 START sql view model analytics.my_second_dbt_model ...................... [RUN]
+[0m22:08:38.320906 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_dbtproject.user_session_channel, now model.my_dbtproject.my_second_dbt_model)
+[0m22:08:38.321310 [debug] [Thread-1 (]: Began compiling node model.my_dbtproject.my_second_dbt_model
+[0m22:08:38.326560 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_dbtproject.my_second_dbt_model"
+[0m22:08:38.327343 [debug] [Thread-1 (]: Began executing node model.my_dbtproject.my_second_dbt_model
+[0m22:08:38.329777 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_dbtproject.my_second_dbt_model"
+[0m22:08:38.330675 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.my_second_dbt_model"
+[0m22:08:38.331036 [debug] [Thread-1 (]: On model.my_dbtproject.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.my_second_dbt_model"} */
+create or replace   view USER_DB_CAMEL.analytics.my_second_dbt_model
+  
+   as (
+    -- Use the `ref` function to select from other models
+
+select *
+from USER_DB_CAMEL.analytics.my_first_dbt_model
+where id = 1
+  );
+[0m22:08:38.671924 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.340 seconds
+[0m22:08:38.679528 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14346de20>]}
+[0m22:08:38.680563 [info ] [Thread-1 (]: 4 of 5 OK created sql view model analytics.my_second_dbt_model ................. [[32mSUCCESS 1[0m in 0.36s]
+[0m22:08:38.681331 [debug] [Thread-1 (]: Finished running node model.my_dbtproject.my_second_dbt_model
+[0m22:08:38.681858 [debug] [Thread-1 (]: Began running node model.my_dbtproject.session_summary
+[0m22:08:38.682557 [info ] [Thread-1 (]: 5 of 5 START sql view model analytics.session_summary .......................... [RUN]
+[0m22:08:38.683146 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_dbtproject.my_second_dbt_model, now model.my_dbtproject.session_summary)
+[0m22:08:38.683614 [debug] [Thread-1 (]: Began compiling node model.my_dbtproject.session_summary
+[0m22:08:38.687930 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_dbtproject.session_summary"
+[0m22:08:38.689100 [debug] [Thread-1 (]: Began executing node model.my_dbtproject.session_summary
+[0m22:08:38.697868 [debug] [Thread-1 (]: Dropping relation "USER_DB_CAMEL"."ANALYTICS"."SESSION_SUMMARY" because it is of type table
+[0m22:08:38.704614 [debug] [Thread-1 (]: Applying DROP to: "USER_DB_CAMEL"."ANALYTICS"."SESSION_SUMMARY"
+[0m22:08:38.710764 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.session_summary"
+[0m22:08:38.711154 [debug] [Thread-1 (]: On model.my_dbtproject.session_summary: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.session_summary"} */
+drop table if exists "USER_DB_CAMEL"."ANALYTICS"."SESSION_SUMMARY" cascade
+[0m22:08:38.967563 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.255 seconds
+[0m22:08:38.973612 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_dbtproject.session_summary"
+[0m22:08:38.975438 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.session_summary"
+[0m22:08:38.975828 [debug] [Thread-1 (]: On model.my_dbtproject.session_summary: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.session_summary"} */
+create or replace   view USER_DB_CAMEL.analytics.session_summary
+  
+   as (
+    WITH u AS (
+    SELECT * FROM USER_DB_CAMEL.analytics.user_session_channel
+), st AS (
+    SELECT * FROM USER_DB_CAMEL.analytics.session_timestamp
+)
+SELECT u.userId, u.sessionId, u.channel, st.ts
+FROM u
+JOIN st ON u.sessionId = st.sessionId
+  );
+[0m22:08:39.491217 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.515 seconds
+[0m22:08:39.498647 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a167cb-0e48-4d70-a62f-cb68cf5f7dcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1418ef3e0>]}
+[0m22:08:39.499972 [info ] [Thread-1 (]: 5 of 5 OK created sql view model analytics.session_summary ..................... [[32mSUCCESS 1[0m in 0.82s]
+[0m22:08:39.500838 [debug] [Thread-1 (]: Finished running node model.my_dbtproject.session_summary
+[0m22:08:39.503062 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:08:39.503703 [debug] [MainThread]: Connection 'model.my_dbtproject.session_summary' was left open.
+[0m22:08:39.504093 [debug] [MainThread]: On model.my_dbtproject.session_summary: Close
+[0m22:08:39.645408 [info ] [MainThread]: 
+[0m22:08:39.646900 [info ] [MainThread]: Finished running 1 table model, 4 view models in 0 hours 0 minutes and 4.27 seconds (4.27s).
+[0m22:08:39.648713 [debug] [MainThread]: Command end result
+[0m22:08:39.679155 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:08:39.680445 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:08:39.685569 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/nishu/my_dbtproject/target/run_results.json
+[0m22:08:39.685872 [info ] [MainThread]: 
+[0m22:08:39.686178 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:08:39.686427 [info ] [MainThread]: 
+[0m22:08:39.686688 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m22:08:39.689716 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.62767, "process_in_blocks": "0", "process_kernel_time": 0.397183, "process_mem_max_rss": "212549632", "process_out_blocks": "0", "process_user_time": 3.645671}
+[0m22:08:39.690109 [debug] [MainThread]: Command `dbt run` succeeded at 22:08:39.690037 after 5.63 seconds
+[0m22:08:39.690382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bc6fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12d33b770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f25e80>]}
+[0m22:08:39.690643 [debug] [MainThread]: Flushing usage events
+[0m22:08:40.246278 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:09:04.270814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063bc950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106fae390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106fae000>]}
+
+
+============================== 22:09:04.272487 | 48cf9599-61fb-4e87-b282-50fa3b1daf42 ==============================
+[0m22:09:04.272487 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:09:04.272823 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'version_check': 'True', 'static_parser': 'True', 'invocation_command': 'dbt snapshot', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'profiles_dir': '/Users/nishu/.dbt', 'indirect_selection': 'eager', 'log_format': 'default', 'printer_width': '80', 'target_path': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'log_path': '/Users/nishu/my_dbtproject/logs', 'no_print': 'None', 'partial_parse': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'log_cache_events': 'False'}
+[0m22:09:04.932364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '48cf9599-61fb-4e87-b282-50fa3b1daf42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x133619820>]}
+[0m22:09:04.957280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '48cf9599-61fb-4e87-b282-50fa3b1daf42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x130341c70>]}
+[0m22:09:04.957826 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m22:09:05.026116 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m22:09:05.115339 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:09:05.115565 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:09:05.140935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '48cf9599-61fb-4e87-b282-50fa3b1daf42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x130133650>]}
+[0m22:09:05.184331 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:09:05.185243 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:09:05.196301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '48cf9599-61fb-4e87-b282-50fa3b1daf42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13408acf0>]}
+[0m22:09:05.196561 [info ] [MainThread]: Found 5 models, 6 data tests, 1 snapshot, 3 sources, 474 macros
+[0m22:09:05.196737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48cf9599-61fb-4e87-b282-50fa3b1daf42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x134233470>]}
+[0m22:09:05.197567 [info ] [MainThread]: 
+[0m22:09:05.197753 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:09:05.197881 [info ] [MainThread]: 
+[0m22:09:05.198129 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:09:05.198545 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_USER_DB_CAMEL'
+[0m22:09:05.230140 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL"
+[0m22:09:05.230350 [debug] [ThreadPool]: On list_USER_DB_CAMEL: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL"} */
+show terse schemas in database USER_DB_CAMEL
+    limit 10000
+[0m22:09:05.230489 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:05.832427 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.601 seconds
+[0m22:09:05.837622 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL, now create_USER_DB_CAMEL_snapshot)
+[0m22:09:05.840011 [debug] [ThreadPool]: Creating schema "database: "USER_DB_CAMEL"
+schema: "snapshot"
+"
+[0m22:09:05.847341 [debug] [ThreadPool]: Using snowflake connection "create_USER_DB_CAMEL_snapshot"
+[0m22:09:05.847865 [debug] [ThreadPool]: On create_USER_DB_CAMEL_snapshot: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "create_USER_DB_CAMEL_snapshot"} */
+create schema if not exists USER_DB_CAMEL.snapshot
+[0m22:09:06.034807 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.186 seconds
+[0m22:09:06.046803 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_USER_DB_CAMEL_snapshot, now list_USER_DB_CAMEL_snapshot)
+[0m22:09:06.060381 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_snapshot"
+[0m22:09:06.060823 [debug] [ThreadPool]: On list_USER_DB_CAMEL_snapshot: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_snapshot"} */
+show objects in USER_DB_CAMEL.snapshot limit 10000;
+[0m22:09:06.211650 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.150 seconds
+[0m22:09:06.217215 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_snapshot, now list_USER_DB_CAMEL_analytics)
+[0m22:09:06.219666 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_analytics"
+[0m22:09:06.220035 [debug] [ThreadPool]: On list_USER_DB_CAMEL_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_analytics"} */
+show objects in USER_DB_CAMEL.analytics limit 10000;
+[0m22:09:06.340945 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.120 seconds
+[0m22:09:06.348915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48cf9599-61fb-4e87-b282-50fa3b1daf42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x134231490>]}
+[0m22:09:06.352946 [debug] [Thread-1 (]: Began running node snapshot.my_dbtproject.snapshot_session_summary
+[0m22:09:06.353686 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshot.snapshot_session_summary ........................ [RUN]
+[0m22:09:06.354264 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_analytics, now snapshot.my_dbtproject.snapshot_session_summary)
+[0m22:09:06.354727 [debug] [Thread-1 (]: Began compiling node snapshot.my_dbtproject.snapshot_session_summary
+[0m22:09:06.365237 [debug] [Thread-1 (]: Began executing node snapshot.my_dbtproject.snapshot_session_summary
+[0m22:09:06.422702 [debug] [Thread-1 (]: Using snowflake connection "snapshot.my_dbtproject.snapshot_session_summary"
+[0m22:09:06.423042 [debug] [Thread-1 (]: On snapshot.my_dbtproject.snapshot_session_summary: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "snapshot.my_dbtproject.snapshot_session_summary"} */
+/* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "snapshot.my_dbtproject.snapshot_session_summary"} */
+select * from (
+        
+    
+
+    select *,
+        md5(coalesce(cast(sessionId as varchar ), '')
+         || '|' || coalesce(cast(ts as varchar ), '')
+        ) as dbt_scd_id,
+        ts as dbt_updated_at,
+        ts as dbt_valid_from,
+        
+  
+  coalesce(nullif(ts, ts), null)
+  as dbt_valid_to
+from (
+        
+
+
+
+SELECT * FROM USER_DB_CAMEL.analytics.session_summary
+
+    ) sbq
+
+
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+[0m22:09:07.036217 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.612 seconds
+[0m22:09:07.047928 [debug] [Thread-1 (]: Using snowflake connection "snapshot.my_dbtproject.snapshot_session_summary"
+[0m22:09:07.048636 [debug] [Thread-1 (]: On snapshot.my_dbtproject.snapshot_session_summary: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "snapshot.my_dbtproject.snapshot_session_summary"} */
+/* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "snapshot.my_dbtproject.snapshot_session_summary"} */
+select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+[0m22:09:07.151081 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.102 seconds
+[0m22:09:07.152781 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.my_dbtproject.snapshot_session_summary"
+[0m22:09:07.155302 [debug] [Thread-1 (]: Using snowflake connection "snapshot.my_dbtproject.snapshot_session_summary"
+[0m22:09:07.155975 [debug] [Thread-1 (]: On snapshot.my_dbtproject.snapshot_session_summary: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "snapshot.my_dbtproject.snapshot_session_summary"} */
+create or replace transient table USER_DB_CAMEL.snapshot.snapshot_session_summary
+         as
+        (
+    
+
+    select *,
+        md5(coalesce(cast(sessionId as varchar ), '')
+         || '|' || coalesce(cast(ts as varchar ), '')
+        ) as dbt_scd_id,
+        ts as dbt_updated_at,
+        ts as dbt_valid_from,
+        
+  
+  coalesce(nullif(ts, ts), null)
+  as dbt_valid_to
+from (
+        
+
+
+
+SELECT * FROM USER_DB_CAMEL.analytics.session_summary
+
+    ) sbq
+
+
+
+        );
+[0m22:09:09.597396 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.440 seconds
+[0m22:09:09.679014 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '48cf9599-61fb-4e87-b282-50fa3b1daf42', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063844a0>]}
+[0m22:09:09.679528 [info ] [Thread-1 (]: 1 of 1 OK snapshotted snapshot.snapshot_session_summary ........................ [[32mSUCCESS 1[0m in 3.32s]
+[0m22:09:09.679834 [debug] [Thread-1 (]: Finished running node snapshot.my_dbtproject.snapshot_session_summary
+[0m22:09:09.680438 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:09:09.680618 [debug] [MainThread]: Connection 'snapshot.my_dbtproject.snapshot_session_summary' was left open.
+[0m22:09:09.680767 [debug] [MainThread]: On snapshot.my_dbtproject.snapshot_session_summary: Close
+[0m22:09:09.794849 [info ] [MainThread]: 
+[0m22:09:09.795331 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 4.60 seconds (4.60s).
+[0m22:09:09.795987 [debug] [MainThread]: Command end result
+[0m22:09:09.817814 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:09:09.818930 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:09:09.823161 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/nishu/my_dbtproject/target/run_results.json
+[0m22:09:09.823407 [info ] [MainThread]: 
+[0m22:09:09.823682 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:09:09.823885 [info ] [MainThread]: 
+[0m22:09:09.824107 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m22:09:09.826525 [debug] [MainThread]: Resource report: {"command_name": "snapshot", "command_success": true, "command_wall_clock_time": 5.5886493, "process_in_blocks": "0", "process_kernel_time": 0.389741, "process_mem_max_rss": "205373440", "process_out_blocks": "0", "process_user_time": 3.338767}
+[0m22:09:09.826825 [debug] [MainThread]: Command `dbt snapshot` succeeded at 22:09:09.826771 after 5.59 seconds
+[0m22:09:09.827049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10684dac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cf8740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ffb0350>]}
+[0m22:09:09.827268 [debug] [MainThread]: Flushing usage events
+[0m22:09:10.174943 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:09:19.885116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a250d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ed1c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ed21e0>]}
+
+
+============================== 22:09:19.886525 | 4b77a3cd-4419-41e1-a883-4c735cb9040d ==============================
+[0m22:09:19.886525 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:09:19.886861 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'version_check': 'True', 'target_path': 'None', 'profiles_dir': '/Users/nishu/.dbt', 'use_experimental_parser': 'False', 'log_format': 'default', 'invocation_command': 'dbt test', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'log_path': '/Users/nishu/my_dbtproject/logs', 'indirect_selection': 'eager', 'partial_parse': 'True', 'fail_fast': 'False', 'quiet': 'False', 'log_cache_events': 'False', 'write_json': 'True', 'use_colors': 'True', 'no_print': 'None', 'static_parser': 'True', 'empty': 'None', 'warn_error': 'None', 'introspect': 'True'}
+[0m22:09:20.414633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b77a3cd-4419-41e1-a883-4c735cb9040d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106eae4e0>]}
+[0m22:09:20.439550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b77a3cd-4419-41e1-a883-4c735cb9040d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106625b20>]}
+[0m22:09:20.439972 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m22:09:20.505202 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m22:09:20.583345 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:09:20.583578 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:09:20.608838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b77a3cd-4419-41e1-a883-4c735cb9040d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a399b50>]}
+[0m22:09:20.652252 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:09:20.653156 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:09:20.666664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b77a3cd-4419-41e1-a883-4c735cb9040d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c4bd040>]}
+[0m22:09:20.666952 [info ] [MainThread]: Found 5 models, 6 data tests, 1 snapshot, 3 sources, 474 macros
+[0m22:09:20.667132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b77a3cd-4419-41e1-a883-4c735cb9040d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a365940>]}
+[0m22:09:20.668045 [info ] [MainThread]: 
+[0m22:09:20.668224 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:09:20.668353 [info ] [MainThread]: 
+[0m22:09:20.668597 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:09:20.670776 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_USER_DB_CAMEL_snapshot'
+[0m22:09:20.700393 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_snapshot"
+[0m22:09:20.700605 [debug] [ThreadPool]: On list_USER_DB_CAMEL_snapshot: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_snapshot"} */
+show objects in USER_DB_CAMEL.snapshot limit 10000;
+[0m22:09:20.700746 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:21.240720 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.540 seconds
+[0m22:09:21.244465 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_snapshot, now list_USER_DB_CAMEL_analytics)
+[0m22:09:21.248030 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_analytics"
+[0m22:09:21.248522 [debug] [ThreadPool]: On list_USER_DB_CAMEL_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_analytics"} */
+show objects in USER_DB_CAMEL.analytics limit 10000;
+[0m22:09:21.400038 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.151 seconds
+[0m22:09:21.406585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b77a3cd-4419-41e1-a883-4c735cb9040d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a8ef1a0>]}
+[0m22:09:21.410109 [debug] [Thread-1 (]: Began running node test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710
+[0m22:09:21.410729 [info ] [Thread-1 (]: 1 of 6 START test not_null_my_first_dbt_model_id ............................... [RUN]
+[0m22:09:21.411327 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_analytics, now test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m22:09:21.411782 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710
+[0m22:09:21.432400 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m22:09:21.433415 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710
+[0m22:09:21.497243 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m22:09:21.498017 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m22:09:21.498216 [debug] [Thread-1 (]: On test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from USER_DB_CAMEL.analytics.my_first_dbt_model
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:09:21.989309 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.491 seconds
+[0m22:09:22.005084 [error] [Thread-1 (]: 1 of 6 FAIL 1 not_null_my_first_dbt_model_id ................................... [[31mFAIL 1[0m in 0.59s]
+[0m22:09:22.005949 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710
+[0m22:09:22.006429 [debug] [Thread-1 (]: Began running node test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778
+[0m22:09:22.006977 [info ] [Thread-1 (]: 2 of 6 START test not_null_my_second_dbt_model_id .............................. [RUN]
+[0m22:09:22.007535 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710, now test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778)
+[0m22:09:22.007956 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778
+[0m22:09:22.012787 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778"
+[0m22:09:22.013657 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778
+[0m22:09:22.016319 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778"
+[0m22:09:22.017350 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778"
+[0m22:09:22.017705 [debug] [Thread-1 (]: On test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from USER_DB_CAMEL.analytics.my_second_dbt_model
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:09:22.295589 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.277 seconds
+[0m22:09:22.301873 [info ] [Thread-1 (]: 2 of 6 PASS not_null_my_second_dbt_model_id .................................... [[32mPASS[0m in 0.29s]
+[0m22:09:22.303130 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778
+[0m22:09:22.303705 [debug] [Thread-1 (]: Began running node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:09:22.304305 [info ] [Thread-1 (]: 3 of 6 START test not_null_session_summary_sessionId ........................... [RUN]
+[0m22:09:22.304909 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778, now test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6)
+[0m22:09:22.305415 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:09:22.311347 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"
+[0m22:09:22.312475 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:09:22.315412 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"
+[0m22:09:22.316605 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"
+[0m22:09:22.317040 [debug] [Thread-1 (]: On test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select sessionId
+from USER_DB_CAMEL.analytics.session_summary
+where sessionId is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:09:22.909304 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.591 seconds
+[0m22:09:22.916442 [info ] [Thread-1 (]: 3 of 6 PASS not_null_session_summary_sessionId ................................. [[32mPASS[0m in 0.61s]
+[0m22:09:22.917702 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:09:22.918436 [debug] [Thread-1 (]: Began running node test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321
+[0m22:09:22.919136 [info ] [Thread-1 (]: 4 of 6 START test unique_my_first_dbt_model_id ................................. [RUN]
+[0m22:09:22.919842 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6, now test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321)
+[0m22:09:22.920306 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321
+[0m22:09:22.929337 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321"
+[0m22:09:22.930225 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321
+[0m22:09:22.932834 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321"
+[0m22:09:22.934004 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321"
+[0m22:09:22.934460 [debug] [Thread-1 (]: On test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from USER_DB_CAMEL.analytics.my_first_dbt_model
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:09:23.423972 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.489 seconds
+[0m22:09:23.428836 [info ] [Thread-1 (]: 4 of 6 PASS unique_my_first_dbt_model_id ....................................... [[32mPASS[0m in 0.51s]
+[0m22:09:23.430021 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321
+[0m22:09:23.430630 [debug] [Thread-1 (]: Began running node test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493
+[0m22:09:23.431212 [info ] [Thread-1 (]: 5 of 6 START test unique_my_second_dbt_model_id ................................ [RUN]
+[0m22:09:23.431826 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321, now test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493)
+[0m22:09:23.432326 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493
+[0m22:09:23.438059 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493"
+[0m22:09:23.439067 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493
+[0m22:09:23.441732 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493"
+[0m22:09:23.443368 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493"
+[0m22:09:23.443788 [debug] [Thread-1 (]: On test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from USER_DB_CAMEL.analytics.my_second_dbt_model
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:09:23.935435 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.491 seconds
+[0m22:09:23.941786 [info ] [Thread-1 (]: 5 of 6 PASS unique_my_second_dbt_model_id ...................................... [[32mPASS[0m in 0.51s]
+[0m22:09:23.942927 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493
+[0m22:09:23.943503 [debug] [Thread-1 (]: Began running node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:09:23.944000 [info ] [Thread-1 (]: 6 of 6 START test unique_session_summary_sessionId ............................. [RUN]
+[0m22:09:23.944620 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493, now test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0)
+[0m22:09:23.945147 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:09:23.950947 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"
+[0m22:09:23.952860 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:09:23.957939 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"
+[0m22:09:23.959185 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"
+[0m22:09:23.959676 [debug] [Thread-1 (]: On test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    sessionId as unique_field,
+    count(*) as n_records
+
+from USER_DB_CAMEL.analytics.session_summary
+where sessionId is not null
+group by sessionId
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:09:24.751191 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.791 seconds
+[0m22:09:24.756057 [info ] [Thread-1 (]: 6 of 6 PASS unique_session_summary_sessionId ................................... [[32mPASS[0m in 0.81s]
+[0m22:09:24.756965 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:09:24.758589 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:09:24.759028 [debug] [MainThread]: Connection 'test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0' was left open.
+[0m22:09:24.759342 [debug] [MainThread]: On test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0: Close
+[0m22:09:24.886924 [info ] [MainThread]: 
+[0m22:09:24.888062 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 4.22 seconds (4.22s).
+[0m22:09:24.890844 [debug] [MainThread]: Command end result
+[0m22:09:24.920681 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:09:24.922207 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:09:24.928119 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/nishu/my_dbtproject/target/run_results.json
+[0m22:09:24.928422 [info ] [MainThread]: 
+[0m22:09:24.928714 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m22:09:24.928945 [info ] [MainThread]: 
+[0m22:09:24.929234 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models/example/schema.yml)[0m
+[0m22:09:24.929503 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m22:09:24.929712 [info ] [MainThread]: 
+[0m22:09:24.929956 [info ] [MainThread]:   compiled code at target/compiled/my_dbtproject/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+[0m22:09:24.930172 [info ] [MainThread]: 
+[0m22:09:24.930418 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=1 SKIP=0 TOTAL=6
+[0m22:09:24.933181 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 5.0789194, "process_in_blocks": "0", "process_kernel_time": 0.306323, "process_mem_max_rss": "211353600", "process_out_blocks": "0", "process_user_time": 3.693839}
+[0m22:09:24.933602 [debug] [MainThread]: Command `dbt test` failed at 22:09:24.933522 after 5.08 seconds
+[0m22:09:24.933884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a250d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12d2bc830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12d2be930>]}
+[0m22:09:24.934144 [debug] [MainThread]: Flushing usage events
+[0m22:09:25.287093 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:12:42.239483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086b2a20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10929e3c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10929e030>]}
+
+
+============================== 22:12:42.241351 | b55b984f-b308-4f81-ad62-1d969973eada ==============================
+[0m22:12:42.241351 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:12:42.241695 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/nishu/.dbt', 'printer_width': '80', 'indirect_selection': 'eager', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error': 'None', 'quiet': 'False', 'debug': 'False', 'invocation_command': 'dbt test', 'cache_selected_only': 'False', 'no_print': 'None', 'empty': 'None', 'target_path': 'None', 'version_check': 'True', 'write_json': 'True', 'log_path': '/Users/nishu/my_dbtproject/logs', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'use_colors': 'True'}
+[0m22:12:43.107983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b55b984f-b308-4f81-ad62-1d969973eada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1243d24e0>]}
+[0m22:12:43.132958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b55b984f-b308-4f81-ad62-1d969973eada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109142810>]}
+[0m22:12:43.133552 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m22:12:43.205871 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m22:12:43.297104 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:12:43.297506 [debug] [MainThread]: Partial parsing: updated file: my_dbtproject://models/output/schema.yml
+[0m22:12:43.488866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b55b984f-b308-4f81-ad62-1d969973eada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1254c09e0>]}
+[0m22:12:43.572490 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:12:43.573382 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:12:43.591557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b55b984f-b308-4f81-ad62-1d969973eada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1255bfa70>]}
+[0m22:12:43.591853 [info ] [MainThread]: Found 5 models, 6 data tests, 1 snapshot, 3 sources, 474 macros
+[0m22:12:43.592035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b55b984f-b308-4f81-ad62-1d969973eada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1255d8ec0>]}
+[0m22:12:43.592948 [info ] [MainThread]: 
+[0m22:12:43.593121 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:12:43.593250 [info ] [MainThread]: 
+[0m22:12:43.593496 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:12:43.595691 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_USER_DB_CAMEL_snapshot'
+[0m22:12:43.629371 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_snapshot"
+[0m22:12:43.629635 [debug] [ThreadPool]: On list_USER_DB_CAMEL_snapshot: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_snapshot"} */
+show objects in USER_DB_CAMEL.snapshot limit 10000;
+[0m22:12:43.629780 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:12:44.189079 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.559 seconds
+[0m22:12:44.192037 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_snapshot, now list_USER_DB_CAMEL_analytics)
+[0m22:12:44.195210 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_analytics"
+[0m22:12:44.195620 [debug] [ThreadPool]: On list_USER_DB_CAMEL_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_analytics"} */
+show objects in USER_DB_CAMEL.analytics limit 10000;
+[0m22:12:44.342368 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.146 seconds
+[0m22:12:44.349351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b55b984f-b308-4f81-ad62-1d969973eada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1255bf7a0>]}
+[0m22:12:44.353538 [debug] [Thread-1 (]: Began running node test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710
+[0m22:12:44.354121 [info ] [Thread-1 (]: 1 of 6 START test not_null_my_first_dbt_model_id ............................... [RUN]
+[0m22:12:44.354704 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_analytics, now test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m22:12:44.355173 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710
+[0m22:12:44.375221 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m22:12:44.376018 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710
+[0m22:12:44.394328 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m22:12:44.395220 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m22:12:44.395522 [debug] [Thread-1 (]: On test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from USER_DB_CAMEL.analytics.my_first_dbt_model
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:12:44.514347 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.118 seconds
+[0m22:12:44.528310 [error] [Thread-1 (]: 1 of 6 FAIL 1 not_null_my_first_dbt_model_id ................................... [[31mFAIL 1[0m in 0.17s]
+[0m22:12:44.529273 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710
+[0m22:12:44.529833 [debug] [Thread-1 (]: Began running node test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778
+[0m22:12:44.530382 [info ] [Thread-1 (]: 2 of 6 START test not_null_my_second_dbt_model_id .............................. [RUN]
+[0m22:12:44.530945 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.not_null_my_first_dbt_model_id.5fb22c2710, now test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778)
+[0m22:12:44.531354 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778
+[0m22:12:44.536292 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778"
+[0m22:12:44.537128 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778
+[0m22:12:44.539671 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778"
+[0m22:12:44.540740 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778"
+[0m22:12:44.541182 [debug] [Thread-1 (]: On test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from USER_DB_CAMEL.analytics.my_second_dbt_model
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:12:44.712316 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.170 seconds
+[0m22:12:44.719026 [info ] [Thread-1 (]: 2 of 6 PASS not_null_my_second_dbt_model_id .................................... [[32mPASS[0m in 0.19s]
+[0m22:12:44.719827 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778
+[0m22:12:44.720306 [debug] [Thread-1 (]: Began running node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:12:44.720713 [info ] [Thread-1 (]: 3 of 6 START test not_null_session_summary_sessionId ........................... [RUN]
+[0m22:12:44.721260 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.not_null_my_second_dbt_model_id.151b76d778, now test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6)
+[0m22:12:44.721711 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:12:44.726010 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"
+[0m22:12:44.726763 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:12:44.728959 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"
+[0m22:12:44.729865 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"
+[0m22:12:44.730211 [debug] [Thread-1 (]: On test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select sessionId
+from USER_DB_CAMEL.analytics.session_summary
+where sessionId is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:12:44.931892 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.201 seconds
+[0m22:12:44.937289 [info ] [Thread-1 (]: 3 of 6 PASS not_null_session_summary_sessionId ................................. [[32mPASS[0m in 0.22s]
+[0m22:12:44.938272 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:12:44.939286 [debug] [Thread-1 (]: Began running node test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321
+[0m22:12:44.940307 [info ] [Thread-1 (]: 4 of 6 START test unique_my_first_dbt_model_id ................................. [RUN]
+[0m22:12:44.941041 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6, now test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321)
+[0m22:12:44.941519 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321
+[0m22:12:44.950879 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321"
+[0m22:12:44.951781 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321
+[0m22:12:44.954367 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321"
+[0m22:12:44.955570 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321"
+[0m22:12:44.956008 [debug] [Thread-1 (]: On test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from USER_DB_CAMEL.analytics.my_first_dbt_model
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:12:45.078180 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.121 seconds
+[0m22:12:45.083298 [info ] [Thread-1 (]: 4 of 6 PASS unique_my_first_dbt_model_id ....................................... [[32mPASS[0m in 0.14s]
+[0m22:12:45.084350 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321
+[0m22:12:45.084898 [debug] [Thread-1 (]: Began running node test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493
+[0m22:12:45.085460 [info ] [Thread-1 (]: 5 of 6 START test unique_my_second_dbt_model_id ................................ [RUN]
+[0m22:12:45.086077 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.unique_my_first_dbt_model_id.16e066b321, now test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493)
+[0m22:12:45.086556 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493
+[0m22:12:45.092178 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493"
+[0m22:12:45.093090 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493
+[0m22:12:45.095694 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493"
+[0m22:12:45.096844 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493"
+[0m22:12:45.097300 [debug] [Thread-1 (]: On test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from USER_DB_CAMEL.analytics.my_second_dbt_model
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:12:45.221417 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.123 seconds
+[0m22:12:45.227668 [info ] [Thread-1 (]: 5 of 6 PASS unique_my_second_dbt_model_id ...................................... [[32mPASS[0m in 0.14s]
+[0m22:12:45.228725 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493
+[0m22:12:45.229162 [debug] [Thread-1 (]: Began running node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:12:45.229626 [info ] [Thread-1 (]: 6 of 6 START test unique_session_summary_sessionId ............................. [RUN]
+[0m22:12:45.230131 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.unique_my_second_dbt_model_id.57a0f8c493, now test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0)
+[0m22:12:45.230517 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:12:45.235221 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"
+[0m22:12:45.235984 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:12:45.240744 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"
+[0m22:12:45.241767 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"
+[0m22:12:45.242116 [debug] [Thread-1 (]: On test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    sessionId as unique_field,
+    count(*) as n_records
+
+from USER_DB_CAMEL.analytics.session_summary
+where sessionId is not null
+group by sessionId
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:12:45.762933 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.520 seconds
+[0m22:12:45.769912 [info ] [Thread-1 (]: 6 of 6 PASS unique_session_summary_sessionId ................................... [[32mPASS[0m in 0.54s]
+[0m22:12:45.770748 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:12:45.772155 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:12:45.772505 [debug] [MainThread]: Connection 'test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0' was left open.
+[0m22:12:45.772850 [debug] [MainThread]: On test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0: Close
+[0m22:12:45.925934 [info ] [MainThread]: 
+[0m22:12:45.927200 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 2.33 seconds (2.33s).
+[0m22:12:45.929818 [debug] [MainThread]: Command end result
+[0m22:12:45.960015 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:12:45.961463 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:12:45.967351 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/nishu/my_dbtproject/target/run_results.json
+[0m22:12:45.967670 [info ] [MainThread]: 
+[0m22:12:45.967968 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m22:12:45.968208 [info ] [MainThread]: 
+[0m22:12:45.968499 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models/example/schema.yml)[0m
+[0m22:12:45.968777 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m22:12:45.968981 [info ] [MainThread]: 
+[0m22:12:45.969229 [info ] [MainThread]:   compiled code at target/compiled/my_dbtproject/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+[0m22:12:45.969454 [info ] [MainThread]: 
+[0m22:12:45.969714 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=1 SKIP=0 TOTAL=6
+[0m22:12:45.972931 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 3.7689319, "process_in_blocks": "0", "process_kernel_time": 0.42304, "process_mem_max_rss": "211337216", "process_out_blocks": "0", "process_user_time": 3.485551}
+[0m22:12:45.973390 [debug] [MainThread]: Command `dbt test` failed at 22:12:45.973305 after 3.77 seconds
+[0m22:12:45.973687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d36900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10929e1e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108676270>]}
+[0m22:12:45.973952 [debug] [MainThread]: Flushing usage events
+[0m22:12:46.419837 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:23:57.472986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108add370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fda4b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fda120>]}
+
+
+============================== 22:23:57.475025 | c0bce992-5b96-4d39-9e2c-987ccb207fe5 ==============================
+[0m22:23:57.475025 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:23:57.475422 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'empty': 'None', 'cache_selected_only': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'no_print': 'None', 'debug': 'False', 'printer_width': '80', 'profiles_dir': '/Users/nishu/.dbt', 'quiet': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'write_json': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'target_path': 'None', 'log_path': '/Users/nishu/my_dbtproject/logs', 'version_check': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test --exclude example'}
+[0m22:23:58.342263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c0bce992-5b96-4d39-9e2c-987ccb207fe5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fd67860>]}
+[0m22:23:58.367256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c0bce992-5b96-4d39-9e2c-987ccb207fe5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1081bf710>]}
+[0m22:23:58.367854 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m22:23:58.439836 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m22:23:58.531232 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:23:58.531462 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:23:58.556821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c0bce992-5b96-4d39-9e2c-987ccb207fe5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12d551e50>]}
+[0m22:23:58.600442 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:23:58.601591 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:23:58.620584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c0bce992-5b96-4d39-9e2c-987ccb207fe5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12e5558e0>]}
+[0m22:23:58.620889 [info ] [MainThread]: Found 5 models, 6 data tests, 1 snapshot, 3 sources, 474 macros
+[0m22:23:58.621069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0bce992-5b96-4d39-9e2c-987ccb207fe5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12b76f2c0>]}
+[0m22:23:58.622021 [info ] [MainThread]: 
+[0m22:23:58.622207 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:23:58.622339 [info ] [MainThread]: 
+[0m22:23:58.622606 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:23:58.624803 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_USER_DB_CAMEL_snapshot'
+[0m22:23:58.683948 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_snapshot"
+[0m22:23:58.684186 [debug] [ThreadPool]: On list_USER_DB_CAMEL_snapshot: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_snapshot"} */
+show objects in USER_DB_CAMEL.snapshot limit 10000;
+[0m22:23:58.684328 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:23:59.202999 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.518 seconds
+[0m22:23:59.205954 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_snapshot, now list_USER_DB_CAMEL_analytics)
+[0m22:23:59.209515 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_analytics"
+[0m22:23:59.210017 [debug] [ThreadPool]: On list_USER_DB_CAMEL_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_analytics"} */
+show objects in USER_DB_CAMEL.analytics limit 10000;
+[0m22:23:59.577993 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.367 seconds
+[0m22:23:59.585262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0bce992-5b96-4d39-9e2c-987ccb207fe5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12b4305c0>]}
+[0m22:23:59.590635 [debug] [Thread-1 (]: Began running node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:23:59.591272 [info ] [Thread-1 (]: 1 of 2 START test not_null_session_summary_sessionId ........................... [RUN]
+[0m22:23:59.591894 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_analytics, now test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6)
+[0m22:23:59.592391 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:23:59.612748 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"
+[0m22:23:59.613875 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:23:59.678454 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"
+[0m22:23:59.679130 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"
+[0m22:23:59.679332 [debug] [Thread-1 (]: On test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select sessionId
+from USER_DB_CAMEL.analytics.session_summary
+where sessionId is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:23:59.883641 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.204 seconds
+[0m22:23:59.899263 [info ] [Thread-1 (]: 1 of 2 PASS not_null_session_summary_sessionId ................................. [[32mPASS[0m in 0.31s]
+[0m22:23:59.900302 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6
+[0m22:23:59.900913 [debug] [Thread-1 (]: Began running node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:23:59.901412 [info ] [Thread-1 (]: 2 of 2 START test unique_session_summary_sessionId ............................. [RUN]
+[0m22:23:59.902033 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_dbtproject.not_null_session_summary_sessionId.e6aec1a6c6, now test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0)
+[0m22:23:59.902483 [debug] [Thread-1 (]: Began compiling node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:23:59.910037 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"
+[0m22:23:59.911154 [debug] [Thread-1 (]: Began executing node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:23:59.913516 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"
+[0m22:23:59.914565 [debug] [Thread-1 (]: Using snowflake connection "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"
+[0m22:23:59.914939 [debug] [Thread-1 (]: On test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    sessionId as unique_field,
+    count(*) as n_records
+
+from USER_DB_CAMEL.analytics.session_summary
+where sessionId is not null
+group by sessionId
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:24:00.172754 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.257 seconds
+[0m22:24:00.178009 [info ] [Thread-1 (]: 2 of 2 PASS unique_session_summary_sessionId ................................... [[32mPASS[0m in 0.28s]
+[0m22:24:00.179155 [debug] [Thread-1 (]: Finished running node test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0
+[0m22:24:00.180692 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:24:00.181121 [debug] [MainThread]: Connection 'test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0' was left open.
+[0m22:24:00.181512 [debug] [MainThread]: On test.my_dbtproject.unique_session_summary_sessionId.9c5e5661a0: Close
+[0m22:24:00.381260 [info ] [MainThread]: 
+[0m22:24:00.382684 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 1.76 seconds (1.76s).
+[0m22:24:00.385336 [debug] [MainThread]: Command end result
+[0m22:24:00.415844 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:24:00.417405 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:24:00.423750 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/nishu/my_dbtproject/target/run_results.json
+[0m22:24:00.424071 [info ] [MainThread]: 
+[0m22:24:00.424377 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:24:00.424614 [info ] [MainThread]: 
+[0m22:24:00.424873 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m22:24:00.427621 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.9911635, "process_in_blocks": "0", "process_kernel_time": 0.439114, "process_mem_max_rss": "206372864", "process_out_blocks": "0", "process_user_time": 3.22372}
+[0m22:24:00.428103 [debug] [MainThread]: Command `dbt test` succeeded at 22:24:00.428018 after 2.99 seconds
+[0m22:24:00.428435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10769a540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107070830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108add370>]}
+[0m22:24:00.428740 [debug] [MainThread]: Flushing usage events
+[0m22:24:00.830623 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:28:20.519401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ebbfb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077ce270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077cdf10>]}
+
+
+============================== 22:28:20.521607 | 83f5a8f5-e1a7-4112-a6c6-6a32868ef575 ==============================
+[0m22:28:20.521607 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:28:20.521978 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run --exclude example', 'introspect': 'True', 'printer_width': '80', 'target_path': 'None', 'use_colors': 'True', 'debug': 'False', 'write_json': 'True', 'empty': 'False', 'partial_parse': 'True', 'no_print': 'None', 'static_parser': 'True', 'version_check': 'True', 'indirect_selection': 'eager', 'profiles_dir': '/Users/nishu/.dbt', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'log_format': 'default', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'fail_fast': 'False', 'log_path': '/Users/nishu/my_dbtproject/logs'}
+[0m22:28:21.372316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '83f5a8f5-e1a7-4112-a6c6-6a32868ef575', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107830110>]}
+[0m22:28:21.397378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '83f5a8f5-e1a7-4112-a6c6-6a32868ef575', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f855e0>]}
+[0m22:28:21.397985 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m22:28:21.468999 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m22:28:21.561431 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:28:21.561682 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:28:21.587215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '83f5a8f5-e1a7-4112-a6c6-6a32868ef575', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x143df8560>]}
+[0m22:28:21.630982 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:28:21.631965 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:28:21.643290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '83f5a8f5-e1a7-4112-a6c6-6a32868ef575', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x140960470>]}
+[0m22:28:21.643549 [info ] [MainThread]: Found 5 models, 6 data tests, 1 snapshot, 3 sources, 474 macros
+[0m22:28:21.643724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '83f5a8f5-e1a7-4112-a6c6-6a32868ef575', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x143c745c0>]}
+[0m22:28:21.644612 [info ] [MainThread]: 
+[0m22:28:21.644789 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:28:21.644918 [info ] [MainThread]: 
+[0m22:28:21.645165 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:28:21.647237 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_USER_DB_CAMEL'
+[0m22:28:21.705487 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL"
+[0m22:28:21.705747 [debug] [ThreadPool]: On list_USER_DB_CAMEL: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL"} */
+show terse schemas in database USER_DB_CAMEL
+    limit 10000
+[0m22:28:21.705896 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:28:22.367664 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.661 seconds
+[0m22:28:22.372020 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL, now list_USER_DB_CAMEL_snapshot)
+[0m22:28:22.385578 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_snapshot"
+[0m22:28:22.386027 [debug] [ThreadPool]: On list_USER_DB_CAMEL_snapshot: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_snapshot"} */
+show objects in USER_DB_CAMEL.snapshot limit 10000;
+[0m22:28:22.537292 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.151 seconds
+[0m22:28:22.543601 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_snapshot, now list_USER_DB_CAMEL_analytics)
+[0m22:28:22.549818 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_CAMEL_analytics"
+[0m22:28:22.550415 [debug] [ThreadPool]: On list_USER_DB_CAMEL_analytics: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "connection_name": "list_USER_DB_CAMEL_analytics"} */
+show objects in USER_DB_CAMEL.analytics limit 10000;
+[0m22:28:22.701547 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.150 seconds
+[0m22:28:22.710038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '83f5a8f5-e1a7-4112-a6c6-6a32868ef575', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057d82f0>]}
+[0m22:28:22.715532 [debug] [Thread-1 (]: Began running node model.my_dbtproject.session_timestamp
+[0m22:28:22.716327 [info ] [Thread-1 (]: 1 of 3 START sql view model analytics.session_timestamp ........................ [RUN]
+[0m22:28:22.716929 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_USER_DB_CAMEL_analytics, now model.my_dbtproject.session_timestamp)
+[0m22:28:22.717420 [debug] [Thread-1 (]: Began compiling node model.my_dbtproject.session_timestamp
+[0m22:28:22.727994 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_dbtproject.session_timestamp"
+[0m22:28:22.729165 [debug] [Thread-1 (]: Began executing node model.my_dbtproject.session_timestamp
+[0m22:28:22.756763 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_dbtproject.session_timestamp"
+[0m22:28:22.758092 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.session_timestamp"
+[0m22:28:22.758397 [debug] [Thread-1 (]: On model.my_dbtproject.session_timestamp: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.session_timestamp"} */
+create or replace   view USER_DB_CAMEL.analytics.session_timestamp
+  
+   as (
+    WITH session_timestamp_cte AS (
+    SELECT
+        sessionId,
+        ts
+    FROM USER_DB_CAMEL.raw.session_timestamp
+)
+SELECT
+    sessionId,
+    ts
+FROM session_timestamp_cte
+  );
+[0m22:28:23.033603 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.274 seconds
+[0m22:28:23.071024 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83f5a8f5-e1a7-4112-a6c6-6a32868ef575', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056f1e50>]}
+[0m22:28:23.071798 [info ] [Thread-1 (]: 1 of 3 OK created sql view model analytics.session_timestamp ................... [[32mSUCCESS 1[0m in 0.35s]
+[0m22:28:23.072397 [debug] [Thread-1 (]: Finished running node model.my_dbtproject.session_timestamp
+[0m22:28:23.072796 [debug] [Thread-1 (]: Began running node model.my_dbtproject.user_session_channel
+[0m22:28:23.073350 [info ] [Thread-1 (]: 2 of 3 START sql view model analytics.user_session_channel ..................... [RUN]
+[0m22:28:23.073818 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_dbtproject.session_timestamp, now model.my_dbtproject.user_session_channel)
+[0m22:28:23.074142 [debug] [Thread-1 (]: Began compiling node model.my_dbtproject.user_session_channel
+[0m22:28:23.076577 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_dbtproject.user_session_channel"
+[0m22:28:23.077407 [debug] [Thread-1 (]: Began executing node model.my_dbtproject.user_session_channel
+[0m22:28:23.080935 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_dbtproject.user_session_channel"
+[0m22:28:23.081829 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.user_session_channel"
+[0m22:28:23.082146 [debug] [Thread-1 (]: On model.my_dbtproject.user_session_channel: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.user_session_channel"} */
+create or replace   view USER_DB_CAMEL.analytics.user_session_channel
+  
+   as (
+    WITH user_session AS (
+    SELECT
+        userId,
+        sessionId,
+        channel
+    FROM USER_DB_CAMEL.raw.user_session_channel
+)
+SELECT
+    userId,
+    sessionId,
+    channel
+FROM user_session
+  );
+[0m22:28:23.337926 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.255 seconds
+[0m22:28:23.343667 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83f5a8f5-e1a7-4112-a6c6-6a32868ef575', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144966180>]}
+[0m22:28:23.344831 [info ] [Thread-1 (]: 2 of 3 OK created sql view model analytics.user_session_channel ................ [[32mSUCCESS 1[0m in 0.27s]
+[0m22:28:23.345595 [debug] [Thread-1 (]: Finished running node model.my_dbtproject.user_session_channel
+[0m22:28:23.346544 [debug] [Thread-1 (]: Began running node model.my_dbtproject.session_summary
+[0m22:28:23.347285 [info ] [Thread-1 (]: 3 of 3 START sql view model analytics.session_summary .......................... [RUN]
+[0m22:28:23.347948 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_dbtproject.user_session_channel, now model.my_dbtproject.session_summary)
+[0m22:28:23.348443 [debug] [Thread-1 (]: Began compiling node model.my_dbtproject.session_summary
+[0m22:28:23.352775 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_dbtproject.session_summary"
+[0m22:28:23.353806 [debug] [Thread-1 (]: Began executing node model.my_dbtproject.session_summary
+[0m22:28:23.356869 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_dbtproject.session_summary"
+[0m22:28:23.358318 [debug] [Thread-1 (]: Using snowflake connection "model.my_dbtproject.session_summary"
+[0m22:28:23.358737 [debug] [Thread-1 (]: On model.my_dbtproject.session_summary: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my_dbtproject", "target_name": "dev", "node_id": "model.my_dbtproject.session_summary"} */
+create or replace   view USER_DB_CAMEL.analytics.session_summary
+  
+   as (
+    WITH u AS (
+    SELECT * FROM USER_DB_CAMEL.analytics.user_session_channel
+), st AS (
+    SELECT * FROM USER_DB_CAMEL.analytics.session_timestamp
+)
+SELECT u.userId, u.sessionId, u.channel, st.ts
+FROM u
+JOIN st ON u.sessionId = st.sessionId
+  );
+[0m22:28:23.808758 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.449 seconds
+[0m22:28:23.816195 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83f5a8f5-e1a7-4112-a6c6-6a32868ef575', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144ff03e0>]}
+[0m22:28:23.816951 [info ] [Thread-1 (]: 3 of 3 OK created sql view model analytics.session_summary ..................... [[32mSUCCESS 1[0m in 0.47s]
+[0m22:28:23.817530 [debug] [Thread-1 (]: Finished running node model.my_dbtproject.session_summary
+[0m22:28:23.818638 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:28:23.818921 [debug] [MainThread]: Connection 'model.my_dbtproject.session_summary' was left open.
+[0m22:28:23.819188 [debug] [MainThread]: On model.my_dbtproject.session_summary: Close
+[0m22:28:23.943174 [info ] [MainThread]: 
+[0m22:28:23.944255 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 2.30 seconds (2.30s).
+[0m22:28:23.945992 [debug] [MainThread]: Command end result
+[0m22:28:23.976891 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nishu/my_dbtproject/target/manifest.json
+[0m22:28:23.978483 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nishu/my_dbtproject/target/semantic_manifest.json
+[0m22:28:23.984061 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/nishu/my_dbtproject/target/run_results.json
+[0m22:28:23.984394 [info ] [MainThread]: 
+[0m22:28:23.984701 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:28:23.984932 [info ] [MainThread]: 
+[0m22:28:23.985196 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m22:28:23.987858 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.505062, "process_in_blocks": "0", "process_kernel_time": 0.431223, "process_mem_max_rss": "203800576", "process_out_blocks": "0", "process_user_time": 3.280039}
+[0m22:28:23.988313 [debug] [MainThread]: Command `dbt run` succeeded at 22:28:23.988231 after 3.51 seconds
+[0m22:28:23.988620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144fb8380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144fba030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144fba600>]}
+[0m22:28:23.988917 [debug] [MainThread]: Flushing usage events
+[0m22:28:24.407753 [debug] [MainThread]: An error was encountered while trying to flush usage events
